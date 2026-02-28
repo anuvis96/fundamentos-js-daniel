@@ -42,3 +42,19 @@ console.log(c)
 //Ocurre porque aunque se declara var afuera en la condicion se puede modificar por ende el 100,
 //con let b al principio podemos actualizar su valor adentro del if pero no declararlo de nuevo por ende imprime 20
 //con const c la cuestión es que no se puede ni volver a declarar ni actualizar entonces todas se elevan a su limite de alcance
+
+
+
+const limpiarTexto = (texto) => {
+    
+    console.log(texto.toLowerCase());
+    console.log(texto.trim());
+    //console.log(texto.replace(/\s+/g, ' '));
+    
+   return texto.trim().replace(/\s+/g, ' '); 
+   
+
+}
+
+limpiarTexto(" Node JS ES6 ");
+
