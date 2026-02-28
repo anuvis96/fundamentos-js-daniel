@@ -58,3 +58,31 @@ const limpiarTexto = (texto) => {
 
 limpiarTexto(" Node JS ES6 ");
 
+
+
+
+
+const techs = ["node", "js", "node", "deno", "js", "node"];
+
+const retornarConteo = (lista) => {
+
+  const mapaConteo = {};
+
+ //creamos la función que va a retornar la lista que se pide,
+ //depues creamos adentro un objeto vacío y extraemos con for of cada tech
+ //miramos dentro del objeto usando el nombre de la tecnologia como key
+ //si ya existe en el array le suma 1, si no lo crea y le asigna 1
+ //por fuera de la condición retornamos
+ //mostramos
+  for (const tecnologia of lista) {
+    if (mapaConteo[tecnologia]) {
+      mapaConteo[tecnologia] = mapaConteo[tecnologia] + 1;
+    } else {
+      mapaConteo[tecnologia] = 1;
+    }
+  }
+
+  return mapaConteo;
+};
+
+console.log(retornarConteo(techs));
