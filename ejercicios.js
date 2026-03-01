@@ -69,7 +69,7 @@ const retornarConteo = (lista) => {
   const mapaConteo = {};
 
  //creamos la función que va a retornar la lista que se pide,
- //depues creamos adentro un objeto vacío y extraemos con for of cada tech
+ //despues creamos adentro un objeto vacío y extraemos con for of cada tech
  //miramos dentro del objeto usando el nombre de la tecnologia como key
  //si ya existe en el array le suma 1, si no lo crea y le asigna 1
  //por fuera de la condición retornamos
@@ -86,3 +86,36 @@ const retornarConteo = (lista) => {
 };
 
 console.log(retornarConteo(techs));
+
+
+
+const encontrarMayor = (numeros) => {
+
+  //sabemos que el tamaño del input que llega es [4, 10, 2, 99, 23].length es 5,
+  //desde 0 hasta 4
+
+  //debo recorrer lo que ingresa
+  //se asune que el primero es el mayor para poder ir comparando
+  //recorremos el array
+  //en el if se compara el numero actual (numeros[i]) es más grande que el que suponemos
+  //si se cumple que es mayor se convierte en ese número más grande 
+  var mayor = numeros[0];
+  for (let i = 0; i < numeros.length; i++){
+
+    if(numeros[i] > mayor){
+
+      mayor = numeros[i];
+
+    }
+
+  }
+
+    return mayor;
+  
+}
+
+const resultado = encontrarMayor([4, 10, 2, 99, 23]);
+console.log("El número mayor es:", resultado)
+
+
+
