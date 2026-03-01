@@ -99,6 +99,7 @@ const encontrarMayor = (numeros) => {
   //recorremos el array
   //en el if se compara el numero actual (numeros[i]) es más grande que el que suponemos
   //si se cumple que es mayor se convierte en ese número más grande 
+  //retornamos y mostramos
   var mayor = numeros[0];
   for (let i = 0; i < numeros.length; i++){
 
@@ -119,3 +120,27 @@ console.log("El número mayor es:", resultado)
 
 
 
+//se crea el objeto con la info original
+//se crea la función que recibe el objeto actual y retornamos el nuevo directamente
+//utilizando Spread Operator para "esparcir" las propiedades del objeto viejo
+//dentro de uno nuevo y añadir la propiedad extra sin tocar el original
+//Comparamos al final que la función es pura:
+//(no modifica variables externas ni los objetos que recibe como parámetros)
+
+const lista_persona_original = {
+  name: "Daniel",
+  age: 30,
+  role: "developer"
+};
+
+const retornarNuevo = (lista_persona_original) => {
+
+  return { ...lista_persona_original, isAdult: true };
+  
+}
+
+
+const objetoFinal = retornarNuevo(lista_persona_original);
+
+console.log("Original:", lista_persona_original);
+console.log("Nuevo:", objetoFinal);
